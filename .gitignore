@@ -210,3 +210,5 @@ __marimo__/
 simple_auth_manager_passwords.json.generated
 airflow.db
 airflow.cfg
+airflow-db-shm
+airflow.db-wal
