@@ -212,3 +212,4 @@ airflow.db
 airflow.cfg
 airflow-db-shm
 airflow.db-wal
+airflow.db-shm
