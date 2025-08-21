@@ -23,7 +23,9 @@ PROCESSED = "/opt/airflow/data/processed/employees_cleaned.csv"
 DB_PATH = "/opt/airflow/data//sqlite/employees.db"     
 
 def extract():
-    print("✅ employees.csv is ready at", RAW)
+    if not os.path.exists(RAW):
+        raise FileNotFoundError(f"❌ employees.csv not found at {RAW}")
+    print(f"✅ employees.csv is ready at {RAW}")
 
 def transform():
     df = pd.read_csv(RAW)
